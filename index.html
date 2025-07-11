@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Showcase - GSAP ScrollTrigger</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Professional parallax effects showcase created using GSAP ScrollTrigger. Demonstrates advanced techniques for creating depth and movement effects during page scrolling.">
+    <meta name="keywords" content="parallax, GSAP, ScrollTrigger, animations, web design, frontend, JavaScript, CSS">
+    <meta name="author" content="Jakub Gietler">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Parallax Showcase - GSAP ScrollTrigger">
+    <meta property="og:description" content="Professional parallax effects showcase with advanced GSAP ScrollTrigger techniques">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/jakubgietler/parallax-effect-gsap">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/667eea/ffffff?text=Parallax+Showcase">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Parallax Showcase - GSAP ScrollTrigger">
+    <meta name="twitter:description" content="Professional parallax effects showcase with advanced GSAP ScrollTrigger techniques">
+    <meta name="twitter:image" content="https://via.placeholder.com/1200x630/667eea/ffffff?text=Parallax+Showcase">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-background">
+            <div class="parallax-layer layer-1" data-speed="0.1">
+                <div class="floating-element element-1"></div>
+                <div class="floating-element element-2"></div>
+                <div class="floating-element element-3"></div>
+            </div>
+            <div class="parallax-layer layer-2" data-speed="0.2">
+                <svg class="hero-svg" viewBox="0 0 1000 600">
+                    <path class="hero-path" d="M0,300 Q250,100 500,300 T1000,300" stroke="rgba(255,255,255,0.1)" fill="none" stroke-width="2"/>
+                    <path class="hero-path-2" d="M0,400 Q250,200 500,400 T1000,400" stroke="rgba(255,255,255,0.05)" fill="none" stroke-width="1"/>
+                </svg>
+            </div>
+            <div class="parallax-layer layer-3" data-speed="0.3">
+                <div class="grid-pattern"></div>
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">PARALLAX</span>
+                <span class="title-line">SHOWCASE</span>
+            </h1>
+            <p class="hero-subtitle">Professional depth effects with GSAP ScrollTrigger</p>
+            <!-- <div class="hero-cta">
+                <button class="cta-button">
+                    <span class="button-text">Explore</span>
+                </button>
+            </div> -->
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <div class="scroll-text">Scroll</div>
+        </div>
+    </section>
+
+    <!-- Multi-Layer Parallax -->
+    <section id="layers" class="layers-section">
+        <div class="section-header">
+            <h2 class="section-title">Multi-Layer Parallax</h2>
+            <p class="section-subtitle">Multi-layered depth effects with subtle differences</p>
+        </div>
+        
+        <div class="layers-container">
+            <div class="parallax-layer" data-speed="0.1">
+                <div class="layer-content">
+                    <h3>Layer 1</h3>
+                    <p>Speed: 0.1 | Position: Top-Left (x: -250, y: -180)</p>
+                    <div class="layer-visual visual-1"></div>
+                    <div class="layer-indicator">↖</div>
+                </div>
+            </div>
+            
+            <div class="parallax-layer" data-speed="0.2">
+                <div class="layer-content">
+                    <h3>Layer 2</h3>
+                    <p>Speed: 0.2 | Position: Top-Right (x: 160, y: -140)</p>
+                    <div class="layer-visual visual-2"></div>
+                    <div class="layer-indicator">↗</div>
+                </div>
+            </div>
+            
+            <div class="parallax-layer" data-speed="0.3">
+                <div class="layer-content">
+                    <h3>Layer 3</h3>
+                    <p>Speed: 0.3 | Position: Bottom-Left (x: -80, y: 150)</p>
+                    <div class="layer-visual visual-3"></div>
+                    <div class="layer-indicator">↙</div>
+                </div>
+            </div>
+            
+            <div class="parallax-layer" data-speed="0.4">
+                <div class="layer-content">
+                    <h3>Layer 4</h3>
+                    <p>Speed: 0.4 | Position: Bottom-Right (x: 110, y: 50)</p>
+                    <div class="layer-visual visual-4"></div>
+                    <div class="layer-indicator">↘</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Parallax - NEW SVG PATH ANIMATION -->
+    <section id="advanced" class="advanced-section">
+        <div class="advanced-background">
+            <div class="parallax-layer layer-3" data-speed="0.3">
+                <div class="grid-pattern"></div>
+            </div>
+        </div>
+        
+        <div class="section-header">
+            <h2 class="section-title">Dynamic Path Drawing</h2>
+            <p class="section-subtitle">Real-time SVG animation with various draw effects</p>
+        </div>
+        
+        <div class="advanced-container">
+            <svg class="advanced-svg" viewBox="0 0 1200 800">
+                <path class="advanced-path" d="M100,400 Q300,200 500,400 T900,400 Q1100,600 900,400 T500,400 Q300,600 500,400 T100,400" />
+                <path class="advanced-path-2" d="M0,300 Q200,100 400,300 T800,300 Q1000,500 800,300 T400,300 Q200,500 400,300 T0,300" />
+                <path class="advanced-path-3" d="M50,200 L150,400 L250,200 L350,400 L450,200 L550,400 L650,200 L750,400 L850,200 L950,400 L1050,200 L1150,400" />
+            </svg>
+            <div class="advanced-layer" data-speed="0.1"></div>
+            <div class="advanced-layer" data-speed="0.2"></div>
+            <div class="advanced-layer" data-speed="0.3"></div>
+        </div>
+    </section>
+
+    <!-- Depth Parallax - FULL SCREEN (COMING SOON - NOT READY YET ☺️) -->
+    <section id="depth" class="depth-section">
+        <div class="depth-container">
+            <div class="depth-layer" data-speed="0.05">
+                <div class="depth-element mountains"></div>
+                <div class="depth-label">Mountains (0.05) - Far</div>
+            </div>
+            
+            <div class="depth-layer" data-speed="0.1">
+                <div class="depth-element clouds"></div>
+                <div class="depth-label">Clouds (0.1) - Medium</div>
+            </div>
+            
+            <div class="depth-layer" data-speed="0.15">
+                <div class="depth-element trees"></div>
+                <div class="depth-label">Trees (0.15) - Closer</div>
+            </div>
+            
+            <div class="depth-layer" data-speed="0.2">
+                <div class="depth-element foreground"></div>
+                <div class="depth-label">Foreground (0.2) - Closest</div>
+            </div>
+            
+            <div class="depth-content">
+                <h3>Realistic Depth Effect</h3>
+                <p>Full-screen depth effect with real images - each element fills the entire screen</p>
+                <div class="depth-info">
+                    <div class="info-item">
+                        <span class="info-label">Mountains:</span>
+                        <span class="info-value">Far (scale: 1.3)</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Clouds:</span>
+                        <span class="info-value">Medium (scale: 1.2)</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Trees:</span>
+                        <span class="info-value">Closer (scale: 1.1)</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Foreground:</span>
+                        <span class="info-value">Closest (scale: 1.05)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speed Variations - ONLY 3 EXAMPLES -->
+    <section id="speed" class="speed-section">
+        <div class="section-header">
+            <h2 class="section-title">Speed Variations</h2>
+            <p class="section-subtitle">Parallax speed differences</p>
+        </div>
+        
+        <div class="speed-container">
+            <div class="speed-item" data-speed="0.05">
+                <div class="speed-indicator">0.05</div>
+                <h3>Slow</h3>
+                <p>Minimal movement with subtle scaling - perfect for backgrounds</p>
+                <div class="speed-effect">Effect: y: -30px, scale: 1.05</div>
+            </div>
+            
+            <div class="speed-item" data-speed="0.3">
+                <div class="speed-indicator">0.3</div>
+                <h3>Medium</h3>
+                <p>Standard parallax with noticeable scaling - for main elements</p>
+                <div class="speed-effect">Effect: y: -160px, scale: 1.2</div>
+            </div>
+            
+            <div class="speed-item" data-speed="0.8">
+                <div class="speed-indicator">0.8</div>
+                <h3>Fast</h3>
+                <p>Intense parallax with dramatic scaling - for accents</p>
+                <div class="speed-effect">Effect: y: -300px, scale: 1.4</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video on Scroll Section -->
+    <section id="video-scroll" class="video-scroll-section">
+        <div class="video-container">
+            <video id="scroll-video" class="scroll-video" muted playsinline>
+                <source src="video-on-scroll.mp4" type="video/mp4">
+                Your browser does not support video playback.
+            </video>
+            <div class="video-overlay">
+                <div class="video-controls">
+                    <h3 style="text-align:center; font-size:1.3rem; font-weight:700; margin-bottom:0.5rem;">Video on Scroll</h3>
+                    <div class="control-item">
+                        <span class="control-label">Progress:</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                        <span class="progress-text">0%</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="control-label">Time:</span>
+                        <span class="time-display">00:00 / 00:00</span>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h4>Scrub Control</h4>
+                            <p>Video position controlled by scroll</p>
+                        </div>
+                        <div class="info-card">
+                            <h4>Real-time</h4>
+                            <p>Smooth synchronization with scrolling</p>
+                        </div>
+                        <div class="info-card">
+                            <h4>Precise</h4>
+                            <p>Exact control of every frame</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <h3>Parallax Showcase</h3>
+                <p>Professional depth effects with GSAP ScrollTrigger</p>
+            </div>
+            <div class="footer-links">
+                <a href="#hero" class="nav-link">Hero</a>
+                <a href="#advanced" class="nav-link">Advanced</a>
+                <a href="#layers" class="nav-link">Layers</a>
+                <a href="#depth" class="nav-link">Depth</a>
+                <a href="#speed" class="nav-link">Speed</a>
+                <a href="#video-scroll" class="nav-link">Video</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
