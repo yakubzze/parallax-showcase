@@ -1,5 +1,10 @@
 # Parallax Showcase - GSAP ScrollTrigger
 
+[![GitHub Pages](https://img.shields.io/badge/Live%20Demo-Available-brightgreen?style=flat-square&logo=github)](https://yakubzie.github.io/parallax-showcase/)
+
+**Live demo available at:**
+[https://yakubzie.github.io/parallax-showcase/](https://yakubzie.github.io/parallax-showcase/)
+
 Parallax effects showcase created using GSAP ScrollTrigger. The project demonstrates advanced techniques for creating depth and movement effects during page scrolling.
 
 ## 🎯 Project Goal
