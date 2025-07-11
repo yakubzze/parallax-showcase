@@ -1,0 +1,18 @@
+{
+  "name": "parallax-showcase",
+  "version": "1.0.0",
+  "description": "Parallax effects showcase created using GSAP ScrollTrigger",
+  "main": "index.html",
+  "keywords": [
+    "parallax",
+    "gsap",
+    "scrolltrigger",
+    "animations",
+    "web-design",
+    "frontend",
+    "javascript",
+    "css"
+  ],
+  "author": "Jakub Gietler",
+  "license": "MIT"
+} 
