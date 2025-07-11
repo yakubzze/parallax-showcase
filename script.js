@@ -385,28 +385,29 @@ function initVideoOnScroll() {
     
     if (!video) return;
     
-    // Time formatting
+    // Time formatting helper
     const formatTime = (seconds) => {
         const mins = Math.floor(seconds / 60);
         const secs = Math.floor(seconds % 60);
         return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
     };
     
-    // ScrollTrigger for video
+    // Pin the video section and sync video progress with scroll
     ScrollTrigger.create({
         trigger: ".video-scroll-section",
-        start: "top bottom",
-        end: "bottom top",
+        start: "top top", // Pin when section hits top of viewport
+        end: () => `+=${window.innerHeight * 2}`, // Pin for 2x viewport height (adjust as needed)
         scrub: 1,
+        pin: true,
+        anticipatePin: 1,
         onUpdate: (self) => {
             if (video.duration) {
+                // Sync video currentTime with scroll progress
                 video.currentTime = video.duration * self.progress;
-                
-                // UI update
+                // Update UI progress bar and time
                 const progress = Math.round(self.progress * 100);
                 progressFill.style.width = `${progress}%`;
                 progressText.textContent = `${progress}%`;
-                
                 const currentTime = formatTime(video.currentTime);
                 const totalTime = formatTime(video.duration);
                 timeDisplay.textContent = `${currentTime} / ${totalTime}`;
